@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom modal and alert</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+            <h2 class="content-heading">Hello javascript</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, ex praesentium quam doloribus ad animi quasi totam velit voluptatum ipsum placeat qui tempore porro laboriosam possimus harum cum laborum dolore iusto quaerat nobis assumenda adipisci sunt? Quo incidunt saepe reiciendis?</p>
+            <button class="content-btn">Click me</button>
+        </div>
+    </div>
+
+    <div class="modal_container classformodal">
+        <div class="modal">
+            <div class="modal-head">
+                <div class="modal_title">
+                    Modal title
+                </div>
+                <button class="cross_btn btn-modal"> <i class="fal fa-times"></i> </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, exercitationem dolores quidem eum odio sapiente ipsam placeat itaque aperiam nesciunt recusandae atque voluptas qui id nulla quibusdam vel voluptatem laboriosam ex omnis et tempore ducimus quae. Consectetur doloribus earum commodi praesentium dolore, a incidunt eum ratione perspiciatis minima, tempora reiciendis?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="alert_container classforalert">
+        <div class="alert">
+            <div class="modal-head">
+                <div class="modal_title">
+                    Unsaved changes
+                </div>
+                <button class="cross_btn btn-alert"> <i class="fal fa-times"></i> </button>
+            </div>
+            <div class="modal-body">
+                <p>Changes you've made will not be saved.</p>
+            </div>
+            <div class="modal-bar">
+                <button class="btn-continue">Continue editing</button>
+                <button class="btn-discard">Discard</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+@import url(https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --shadow-2: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    --shadow-5: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    --shadow-8: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.611) ,rgba(0,0,0,0.611) ) , url(https://cutewallpaper.org/21/nice-backgrounds-hd/Nice-Backgrounds-Image-Wallpaper-Cave.jpg) no-repeat center center;
+    background-size: cover;
+}
+.content{
+    width: 500px;
+    height: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.content-heading{
+    font-size: 60px;
+    margin: 30px auto;
+}
+.content-btn{
+    border: none;
+    background: rgb(8, 135, 177);
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.modal_container.classformodal{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.707);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: .4s;
+}
+
+.modal{
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: scale(0);
+    transition: .4s;
+    box-shadow: var(--shadow-2);
+}
+
+.modal-head{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.modal_title{
+    text-align: center;
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 25px;
+}
+.cross_btn {
+    position: absolute;
+    right: 10px;
+    height: 36px;
+    width: 36px;
+    background-color: #E4E6EB;
+    border-radius: 50%;
+    border: none;
+    color: #1c1e21;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cross_btn *{
+    pointer-events: none;
+}
+.cross_btn:hover {
+    background-color: #d0d3da;
+}
+.modal-body{
+    padding: 20px;
+    text-align: left;
+}
+
+/* fonctional style start here */
+.modal_container.open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: inherit;
+}
+.open .modal{
+    transform: scale(1);
+}
+
+/* Aleart style start here */
+.alert_container{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.707);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: .4s;
+}
+.alert_container.open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: inherit;
+    transition: .4s;
+}
+.alert{
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: scale(0);
+    transition: .4s;
+    box-shadow: var(--shadow-2);
+}
+.open .alert{
+    transform: scale(1);
+    transition: .4s;
+}
+.modal-bar{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+button{
+    cursor: pointer;
+}
+button.btn-continue {
+    color: #1b74e4;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    padding: 7px 15px;
+    transition: .3s;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+button.btn-continue:hover {
+    background: #d0d3da;
+}
+button.btn-discard {
+    background-color: #1b74e4;
+    font-weight: 700;
+    border: none;
+    padding: 7px 15px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 14px;
+}
